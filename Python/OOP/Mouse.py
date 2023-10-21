@@ -1,2 +1,3 @@
-class Retangulo:
-    pass
+import treino
+
+treino.__name__

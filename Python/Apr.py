@@ -4,6 +4,8 @@ import random
 import os
 import shutil
 import functools
+import threading
+from multiprocessing import process, cpu_count
 
 # modules
 
@@ -418,3 +420,102 @@ import Module as MyModule # ou import print
 
 #val = functools.reduce(lambda x,y: x*y,factorial)
 #print(val)
+
+
+#squares = [i for i in 'mensagem']
+#print(squares)
+
+#students = [100,90,80,40,50,10]
+
+#passed = list(filter(lambda x: x>= 50, students))
+
+# passed = [i for i in students if i >= 50]
+
+#passed = [i if i >= 50 else 'Falhou' for i in students] 
+
+#print(passed)
+
+#dictionary = {'NY': 32, 'Boston': 75, 'Chicago': 1}
+
+#dictionary_in_C = {k: round(((v-32)*(5/9))) for (k,v) in dictionary.items()}
+
+#def ie(k,v):
+    #if v >= 22:
+   #     return 'warm'
+  #  else:
+ #       return 'cold'
+
+#desc_City = {k: ie(k,v) for (k,v) in dictionary_in_C.items()}
+
+#print(dictionary_in_C, ' // ', desc_City)
+
+#climate = {'ny': 'snow', 'boston': 'sunny', 'los angeles': 'sunny', 'chicago': 'cloudy'}
+
+#sunny_clima = {k: v for (k,v) in climate.items() if v == 'sunny'}
+
+#print(sunny_clima)
+
+#usernames = ['dude','senhora','legal']
+#passwords = ['senha1234','legaldimaize','caneta azul']
+#log_date = ['01/01/2001','03/12/2023','11/11/2011']
+
+#users = zip(usernames,passwords,log_date)
+
+#for k in users:
+ #   print('name: ',k[0],' Password: ', k[1], ' Log Date: ', k[2])
+
+#print(time.ctime(time.time()))
+
+#timeobj = time.localtime()
+#utc = time.gmtime()
+#localtime = time.strftime('%B %D %Y %H:%M:%S',timeobj)
+#print(localtime)
+
+#time_touple = (2020, 4, 20, 4, 20, 0, 0, 0, 0)
+#timestr = time.asctime(time_touple)
+
+#print(timestr)
+
+#def eat_Breakfast():
+ #   time.sleep(3)
+  #  print('breakfeast')
+
+#def drink():
+ #   time.sleep(4)
+  #  print('drink')
+
+
+#def study():
+ #   time.sleep(5)
+  #  print('study')
+
+#x = threading.Thread(target=eat_Breakfast, args=())
+#x.start()
+#y = threading.Thread(target=drink, args=())
+#y.start()
+#z = threading.Thread(target=study, args=())
+#z.start()
+
+#x.join() # wait until eatbreakfast is done
+#y.join()
+#z.join()
+
+#print(threading.active_count())
+#print(threading.enumerate())
+#print(time.perf_counter())
+
+#def timer():
+#    print()
+ #   count = 0
+  #  while True:
+   #     time.sleep(1)
+    #    count += 1
+      #   print('logged in for ', count)
+
+#thr = threading.Thread(target=timer,args=(),daemon=True)
+#thr.start()
+
+#thr.setDaemon(True)
+#print(thr.isDaemon())
+
+#inputer = input('wanna exit? ')
